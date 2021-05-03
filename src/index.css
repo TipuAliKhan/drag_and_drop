@@ -94,7 +94,8 @@ body {
 }
 
 #add-list,
-#add-card{
+#add-card,
+#form-add-card{
   display: flex;
   align-items: center;
   justify-content: center;
