@@ -25,7 +25,9 @@ const Board = (props) => {
                 onDrop={drop}
                 onDragOver={dragOver}
             >
-                <h2 className="board-title">{props.title}</h2>
+                <h2 className="board-title">{props.title}
+                <span className="close" title="Delete board" onClick={() => props.removeBoard(props.title)}>x</span>
+                </h2>
                 {props.children}
                 <button className="add-card" onClick={() => props.addCard(props.title)}>Add</button>
             </div>

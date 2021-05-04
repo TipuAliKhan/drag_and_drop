@@ -5,8 +5,9 @@ const AddCard = (props) => {
     const fillAddCardForm = (event) => {
         const title = document.querySelector('#add-card [name="title"]').value;
         const desc = document.querySelector('#add-card textarea').value;
-        if ( title && desc) {
+        if (title && desc) {
             props.addCard({
+                id: Math.floor(Math.random()*10000000+50000),
                 title: title,
                 desc: desc
             });
@@ -14,7 +15,6 @@ const AddCard = (props) => {
         } else {
             alert("Enter correct values");
         }
-
     }
 
     return (

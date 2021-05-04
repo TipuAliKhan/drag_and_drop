@@ -17,7 +17,7 @@ const Card = (props) => {
 
     return (
         <div 
-        id={props.id} 
+        id={props.data.id} 
         className={props.className}
         draggable={props.draggable}
         onDragStart={dragStart}
@@ -25,7 +25,7 @@ const Card = (props) => {
         >
             <h2>{props.data.title}</h2>
             <p>{props.data.desc}</p>
-            <span className="close" title="Delete card" onClick={() => {props.removeCard()}}>x</span>
+            <span className="close" title="Delete card" onClick={() => props.removeCard(props.board, props.data.id)}>x</span>
         </div>
     )    
 }
